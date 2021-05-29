@@ -50,15 +50,15 @@ static int __init usb_disp_init(void)
 {
 	int result;
 
-        if (fps == 0) {
+    if (fps == 0) {
 	    /* frame rate is not set through the modprobe command. Use the value defined in the .config */
 #ifdef CONFIG_RPUSBDISP_FPS
 	    fps = CONFIG_RPUSBDISP_FPS;
 #else
 	    /* Just in case for background compliance. Maybe the Kconfig file of the driver is not integrated */
-            fps = 16;
+        fps = 16;
 #endif
-        }
+    }
 
     do {
 	    
